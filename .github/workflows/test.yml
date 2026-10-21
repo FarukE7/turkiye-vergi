@@ -1,0 +1,33 @@
+name: test
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 6 15 12 *'   # Her 15 Aralık: yeni yıl tarifesinin eklenip eklenmediği kontrol edilir
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.1', '8.2', '8.3', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - run: php tests/run.php
+
+  next-year-tariff:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gelecek yılın tarifesi var mı?
+        run: |
+          next=$(( $(date +%Y) + 1 ))
+          if [ ! -f "data/$next.json" ]; then
+            echo "::warning::data/$next.json yok. Resmî Gazete'de yayımlanınca $next tarifesini ekleyin."
+          fi

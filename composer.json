@@ -1,0 +1,19 @@
+{
+    "name": "sevensdesign/turkiye-vergi",
+    "description": "Türkiye vergi hesaplamaları: gelir vergisi tarifesi, kurumlar vergisi, KDV, tevkifat, stopaj ve binek araç gider kısıtlamaları. Kuruş hassasiyetinde, bağımlılıksız.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["türkiye", "turkey", "vergi", "tax", "kdv", "vat", "gelir vergisi", "income tax", "kurumlar vergisi", "stopaj", "tevkifat", "muhasebe", "accounting"],
+    "authors": [
+        { "name": "Seven's Design", "email": "info@sevens-design.com" }
+    ],
+    "require": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": { "SevensDesign\\TurkiyeVergi\\": "src/" }
+    },
+    "scripts": {
+        "test": "php tests/run.php"
+    }
+}

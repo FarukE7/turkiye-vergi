@@ -1,0 +1,24 @@
+{
+  "year": 2026,
+  "reviewed": "2026-09-11",
+  "income_tax": {
+    "brackets": [
+      { "up_to": 190000, "rate": 15 },
+      { "up_to": 400000, "rate": 20 },
+      { "up_to": 1000000, "rate": 27 },
+      { "up_to": 5300000, "rate": 35 },
+      { "up_to": null, "rate": 40 }
+    ],
+    "note": "GVK md. 103, ücret dışındaki gelirler tarifesi.",
+    "source": "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv%2Fyardim-kaynaklar%2Fyararli-bilgiler%2Fgelir-vergisi-tarifeleri%2Fgelir-vergisi-tarifesi-2026.pdf"
+  },
+  "corporate_tax": {
+    "general_rate": 25,
+    "special_rate": 30,
+    "source": "https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=DUYURU%2FUNIVERSAL%2F2026%2F2026_KurumlarVergisiOran.pdf"
+  },
+  "passenger_car": {
+    "monthly_rent_cap": 46000,
+    "note": "Kiralanan binek otomobilde KDV hariç aylık kira bedelinin gider yazılabilecek tavanı (GVK 40/5, KVK 11/1-b; GVGT Seri No. 332)."
+  }
+}
